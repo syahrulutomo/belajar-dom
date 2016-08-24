@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Belajar Javascript</title>
+
+ </head>
+ <body>
+   <h1>Belajar DOM Javascript</h1>
+   <img src="game.png" alt="">
+
+   <div id="box1"> </div>
+      <div class="boxes"></div>
+      <div class="boxes"></div>
+      <div class="boxes"></div>
+
+
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>Javascript</li>
+    </ul>
+
+    <script>
+      //selector
+      document.getElementById('box1').innerHTML = "Javascript is easy";
+
+      var boxes = document.getElementsByClassName('boxes');
+        boxes[0].innerHTML = "really";
+        boxes[1].innerHTML = "of course";
+        boxes[2].innerHTML = "surely";
+
+      var list = document.getElementsByTagName('li');
+        list[0].innerHTML = "content1";
+        list[1].innerHTML = "content2";
+        list[2].innerHTML = "content3";
+
+      document.querySelectorAll('.boxes')[0].innerHTML = "new content1";
+      document.querySelectorAll('.boxes')[1].innerHTML = "new content2";
+      document.querySelectorAll('.boxes')[2].innerHTML = "new content3";
+
+  </script>
+
+  <a href="edit.html">Add Remove Edit Element</a>
+  <a href="attribute.html">Customize CSS with DOM</a>
+
+ </body>
+</html>

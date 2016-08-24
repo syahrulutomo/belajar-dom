@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Belajar Javascript</title>
+   <style>
+      .merah{
+        background-color: red;
+        color: white;
+      }
+      .black{
+        border: 3px black solid;
+      }
+
+   </style>
+ </head>
+ <body>
+   <h1 id="h1">Belajar DOM Javascript</h1>
+   <img onclick="berubah()" src="game.png" height=300 alt="" id="gambar" class = "black">
+
+   <div id="box1"> </div>
+      <div class="boxes"></div>
+      <div class="boxes"></div>
+      <div class="boxes"></div>
+
+
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>Javascript</li>
+    </ul>
+
+    <input type="text" id="input"></input>
+    <input type="submit" id="submit"></input>
+    Namanya adalah <span id="p1"> </span>
+
+    <script>
+      var img = document.getElementById('gambar');
+      img.height = 400;
+      img.style.border ='3px solid blue';
+
+
+      var h1 = document.getElementById('h1');
+      h1.setAttribute('class','merah');
+      h1.className += ' black';
+
+      //-----------event------------
+      function berubah(){
+        img.style.borderColor ='black';
+      }
+
+      //h1.onclick = function(){ berubah2() };
+      function berubah2(){
+        h1.style.backgroundColor ='blue';
+      }
+
+      function berubah3(){
+        h1.style.backgroundColor ='green';
+      }
+
+      h1.addEventListener('mouseenter',function(){
+        berubah2()
+      });
+
+      h1.addEventListener('mouseleave',function(){
+        h1.style.backgroundColor ='red';
+      });
+
+      h1.addEventListener('click',berubah3);
+
+      var span = document.getElementById('p1');
+      var submit = document.getElementById('submit');
+
+      submit.onclick = function(){
+        var text = input.value;
+        span.innerHTML = text;
+      }
+    </script>
+ </body>
+</html>
